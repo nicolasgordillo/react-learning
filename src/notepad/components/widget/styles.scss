@@ -1,0 +1,107 @@
+@import "../../../variables";
+
+.widget {
+  position: fixed;
+  bottom: $separator;
+  right: $separator;
+  transform: scale(0);
+  &__modal {
+    position: absolute;
+    right: 0;
+    width: 250px;   
+    bottom: $header-height;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 50px 0 rgba(0,0,0,.3);
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    background-color: $red;
+    color: white;
+  }
+  &__list {
+    padding: $separator;
+    background: $gray-background;
+    max-height: 500px;
+    overflow: scroll;
+  }
+  &__note {
+    color: $widget-message-color;
+  }
+  &__input {
+    border: none;
+    height: 40px;
+    font-size: 14px;   
+    background: $gray-background;
+    padding-left: $separator;
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__form {
+    background: $gray-background;
+  }
+  &__button {
+    float: right;
+    margin-right: $separator;
+    background: none;
+    border: none;
+    height: 30px;
+    padding: 0 $separator 2px;
+    font-size: 14px;
+    border: 1px solid $green;
+    border-radius: $separator;
+    color: $blue;
+    background: $green;
+    transition-property: color;
+    transition-duration: .3s;
+    transform: translateZ(0);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  &__button:focus {
+    outline: none;
+  }
+  
+  &__button:hover {
+    border: 1px solid $orange;
+    color: #333;
+  }
+  
+  &__button:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $orange;
+    z-index: -1;
+    border-radius: 100%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.4s;
+  }
+  
+  &__button:hover:before {
+    transform: scale(2);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .widget {
+    &__list {
+      max-height: 290px;
+    }
+    &__modal {
+      position: absolute;
+      right: 0;
+      width: 250px;
+      bottom: 100px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0px 50px 0 rgba(0,0,0,.3);
+    }
+  }
+}

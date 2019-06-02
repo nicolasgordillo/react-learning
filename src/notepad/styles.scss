@@ -1,0 +1,14 @@
+@import "../variables";
+
+.notepad {
+  margin: -8px 0 0 -8px;
+  font-family: 'Ubuntu',"Trebuchet MS",Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+
+  hr {
+    margin: 50px 0;
+    width: 100%;
+    opacity: 0.7;
+  }
+}

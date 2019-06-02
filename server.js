@@ -14,4 +14,5 @@ server.get('/*', (req, res) => {
 
 // start the server
 server.listen(config.port);
-console.log("Application listening on port: ", config.port);
+// eslint-disable-next-line no-console
+console.log('Application listening on port: ', config.port);

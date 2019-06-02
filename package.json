@@ -4,7 +4,7 @@
   "description": "A notepad with redux",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && nodemon ./server.js",
+    "start": "nodemon ./server.js",
     "test": "jest --config jest.config.js --coverage",
     "test:watch": "npm test -- --watch",
     "start-dev": "nodemon ./server.js",

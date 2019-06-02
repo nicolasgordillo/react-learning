@@ -1,15 +1,10 @@
 // // app styles
-import './variables.scss';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import Notepad from './notepad';
-import store from './store';
+import './variables.scss';
+import ToDoList from './components/to-do-list';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Notepad />
-  </Provider>,
-  document.getElementById('app'),
+  // eslint-disable-next-line no-undef
+  <ToDoList text="This is supposed to be the todo list" />, document.getElementById('app'),
 );
